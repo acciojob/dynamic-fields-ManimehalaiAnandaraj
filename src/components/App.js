@@ -54,12 +54,13 @@ const App = () => {
           >
             Remove
           </button>
-        </div>
-      ))}
-      <button type="button" onClick={handleAddField} style={{ marginRight: '5px' }}>
+          <button type="button" onClick={handleAddField} style={{ marginRight: '5px' }}>
         Add More
       </button>
       <button type="submit">Submit</button>
+        </div>
+      ))}
+      
     </form>
   );
 };
