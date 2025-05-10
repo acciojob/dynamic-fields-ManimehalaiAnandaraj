@@ -57,7 +57,7 @@ const App = () => {
         </div>
       ))}
       <button type="button" onClick={handleAddField} style={{ marginRight: '5px' }}>
-        Add Field
+        Add More
       </button>
       <button type="submit">Submit</button>
     </form>
