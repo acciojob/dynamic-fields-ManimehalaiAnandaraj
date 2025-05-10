@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{textAlign:"center"}}>
       {fields.map((field) => (
         <div key={field.id} style={{ marginBottom: '10px' }}>
           <input
@@ -37,6 +37,7 @@ const App = () => {
             placeholder="Name"
             value={field.name}
             onChange={(e) => handleInputChange(field.id, e)}
+            required
             style={{ marginRight: '5px' }}
           />
           <input
@@ -45,6 +46,7 @@ const App = () => {
             placeholder="Age"
             value={field.age}
             onChange={(e) => handleInputChange(field.id, e)}
+            required
             style={{ marginRight: '5px' }}
           />
           <button
@@ -54,13 +56,12 @@ const App = () => {
           >
             Remove
           </button>
-          <button type="button" onClick={handleAddField} style={{ marginRight: '5px' }}>
-        Add More
-      </button>
-      <button type="submit">Submit</button>
         </div>
       ))}
-      
+      <button type="button" onClick={handleAddField} style={{ marginRight: '5px' }}>
+        Add More...
+      </button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
